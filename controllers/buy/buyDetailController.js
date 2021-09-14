@@ -41,7 +41,6 @@ export const getListBuyDetail = async (req, res) => {
 //@DESC create a buy DETAIL
 export const createBuyDetail = async (req, res) => {
   try {
-    console.log(req.body);
     const {
       idOwner,
       idCustomer,

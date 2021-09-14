@@ -17,7 +17,7 @@ const app = express();
 dotenv.config();
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
-app.use(cors({ credentials: true, origin: true }));
+app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 
 app.use("/users", userRoutes);
 
