@@ -75,7 +75,6 @@ export const registerUser = async (req, res) => {
 export const getAccessToken = async (req, res) => {
   try {
     const refreshToken = req.headers.cookie.split("=")[1];
-
     //validate refreshtoken
     if (!refreshToken)
       return res
@@ -83,7 +82,6 @@ export const getAccessToken = async (req, res) => {
         .json({ success: false, message: "information invalid" });
     //validate refreshtoken from db
     const user = await User.findOne({ refreshToken });
-
     if (!user)
       return res
         .status(403)
