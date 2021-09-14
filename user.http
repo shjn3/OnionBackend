@@ -1,0 +1,27 @@
+POST http://localhost:5000/users/register
+Content-Type: application/json
+
+{
+    "username":"admin1",
+    "password":"123"
+}
+
+###
+POST http://localhost:5000/users/login
+Content-Type: application/json
+
+{
+    "username":"admin",
+    "password":"123"
+}
+
+###
+POST http://localhost:5000/users/token
+Content-Type: application/json
+
+{
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTNkNjMzMDAyMDY1NDVhYzRhNzRhNmYiLCJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjMxNDEzMzEyLCJleHAiOjE2MzE0MjA1MTJ9.Gr9DmfMinHaglajNMMDioxSRHBKbFRx_Go5A3Er35io"
+}
+###
+GET http://localhost:5000/users/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTNkNjMzMDAyMDY1NDVhYzRhNzRhNmYiLCJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNjMxNDE0MDIwLCJleHAiOjE2MzE0MjEyMjB9.1hZwlCF9gaQ-Aez-uzLKLIc1jt5rA17xm31w0XdJEgg

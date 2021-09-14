@@ -1,0 +1,128 @@
+
+GET http://localhost:5000/buy
+
+###
+POST http://localhost:5000/buy
+Content-Type: application/json
+
+{
+    "full_name":"thanhtuan",
+    "phone_number":"09744",
+    "note":"",
+    "status":1,
+    "deposit":500000,
+    "area":3,
+    "type_buy":2
+}
+
+###
+
+PATCH http://localhost:5000/buy/612f36ef3b53b50334a70f68
+Content-Type: application/json
+
+{
+    "full_name":"thanhtu",
+    "phone_number":"09744",
+    "note":"",
+    "status":1,
+    "deposit":500000,
+    "area":3,
+    "type_buy":2
+}
+###
+
+DELETE http://localhost:5000/buy/612f36c03b53b50334a70f66
+
+//driver
+
+###
+GET http://localhost:5000/driver
+
+###
+POST http://localhost:5000/driver
+Content-Type: application/json
+
+{
+    "full_name":"thanhtu",
+    "phone_number":"0123",
+    "note":""
+}
+
+###
+
+PATCH http://localhost:5000/driver/612f385e4f260f2594210a19
+Content-Type: application/json
+
+{
+    "full_name":"thanhtuan",
+    "phone_number":"01234",
+    "note":""
+}
+###
+
+DELETE http://localhost:5000/driver/613083f6d36e043d48a3ad53
+
+
+//buy detail
+
+### 
+GET http://localhost:5000/buydetail/1+6130953f52cd4818ccc2cc15
+
+###
+
+PATCH http://localhost:5000/buydetail/613442e66b442e22b0b432c7
+Content-Type: application/json
+
+ {
+      "idOwner": "6130953f52cd4818ccc2cc15",
+      "idDriver": "6130956152cd4818ccc2cc1d",
+      "note": null,
+      "status": 1,
+      "box_l": 1,
+      "box_m": null,
+      "box_s": null,
+      "bags": [
+        {
+          "_id": "6132e41590423e2b68d236ff",
+          "key": "5UQ2kAr72BC9515lGHERQ",
+          "type": 1,
+          "kilo": 20,
+          "total": 0
+        }
+      ],
+      "price": 12
+    }
+
+
+
+###
+POST http://localhost:5000/buydetail
+Content-Type: application/json
+
+    {
+      "idOwner": "6133586ce34a533670982975",
+      "idDriver": "6130956052cd4818ccc2cc1a",
+      "note": null,
+      "status": 1,
+      "box_l": 1,
+      "box_m": null,
+      "box_s": null,
+      "bags": [
+        {
+          "_id": "6132e41590423e2b68d236ff",
+          "key": "5UQ2kAr72BC9515lGHERQ",
+          "type": 1,
+          "kilo": 20,
+          "total": 0
+        }
+      ],
+      "price": 12
+    }
+
+
+###
+
+DELETE http://localhost:5000/buydetail/61334e98fd86333e3c70dd65
+
+###
+DELETE http://localhost:5000/buy/6133586be34a533670982973
